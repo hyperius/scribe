@@ -9,3 +9,7 @@ install-sh
 missing
 mkinstalldirs
 *.o
+
+.project
+.cproject
+.settings/
