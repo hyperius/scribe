@@ -1558,8 +1558,7 @@ void BufferStore::periodicCheck() {
     // incoming messages directly to the primary store without buffering to
     // secondary store.
     if (flushStreaming) {
-      uint64_t qsize = storeQueue->getSize();
-      if(qsize >=
+      if(storeQueue->getSize() >=
           maxByPassRatio * g_Handler->getMaxQueueSize()) {
         return;
       }
